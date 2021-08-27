@@ -1,29 +1,40 @@
 import React, { useEffect, useState } from "react";
-// 模拟数据接口，3 秒钟返回数据。
-const getList = (query) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve([6, 7, 8, 9, 10]);
-    }, 3000);
-  });
-};
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
+import NavBar from "@/components/NavBar";
+
+import { ConfigProvider } from "zarm";
+
+import routes from "@/router";
 function App() {
-  const [data, setData] = useState([1, 2, 3, 4, 5]);
+  const location = useLocation(); // 拿到 location 实例
+  const { pathname } = location; // 获取当前路径
+  const needNav = ["/", "/data", "/user"]; // 需要底部导航栏的路径
+  const [showNav, setShowNav] = useState(false); // 是否展示 Nav
 
   useEffect(() => {
-    (async () => {
-      const data = await getList();
-      console.log("data", data);
-      setData(data);
-    })();
-  }, []);
+    console.log(pathname);
+    setShowNav(needNav.includes(pathname));
+  }, [pathname]); // [] 内的参数若是变化，便会执行上述回调函数=
+
   return (
-    <div className="App">
-      {data.map((item, index) => (
-        <span key={index}>{item}</span>
-      ))}
-    </div>
+    <>
+      <ConfigProvider primaryColor={"#007fff"}>
+        <Switch>
+          {routes.map((route) => (
+            <Route exact key={route.path} path={route.path}>
+              <route.component />
+            </Route>
+          ))}
+        </Switch>
+      </ConfigProvider>
+      <NavBar showNav={showNav} pathname={pathname} />
+    </>
   );
 }
 
