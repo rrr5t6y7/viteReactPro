@@ -1,47 +1,80 @@
 .auth {
   min-height: 100vh;
-  background-image: linear-gradient(
-    217deg,
-    #6fb9f8,
-    #3daaf85e,
-    #49d3fc1a,
-    #3fd3ff00
-  );
+  // background-image: linear-gradient(
+  //   217deg,
+  //   #d5e4fb,
+  //   #e2e9f5,
+  //   #eff2f7,
+  //   #3fd3ff00
+  // );
+  background: url("../../assets/images/loginBg2.jpeg") no-repeat center;
+  background-size: 100%;
+
   .head {
-    height: 200px;
-    background: url("//s.yezgea02.com/1616032174786/cryptocurrency.png")
-      no-repeat center;
-    background-size: 120%;
+    height: 0px;
+    // background: url("../../assets/images/loginBg.jpeg") no-repeat center;
+    // background-size: 100%;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+    // transition: all 1.5s;
     img {
       width: 34px;
       margin: 15px 0 0 15px;
     }
+    animation: showIn ease-in-out 1s forwards;
+    // animation-fill-mode: none;
   }
+  @keyframes showIn {
+    0% {
+      height: 0px;
+    }
+    50% {
+      height: 250px;
+    }
+    90% {
+      height: 155px;
+    }
+    95% {
+      height: 165px;
+    }
+    100% {
+      height: 160px;
+    }
+  }
+
   .tab {
-    color: #597fe7;
-    padding: 30px 24px 10px 24px;
+    color: #74acdf;
+    padding: 100px 24px 10px 24px;
     > span {
       margin-right: 10px;
       font-size: 14px;
       font-weight: bold;
       &.avtive {
         font-size: 20px;
-        border-bottom: 2px solid #597fe7;
+        border-bottom: 2px solid #74acdf;
         padding-bottom: 6px;
       }
     }
   }
   .form {
     padding: 0 6px;
+
     :global {
+      input {
+        font-size: 13px;
+      }
       .za-cell {
         background-color: transparent;
         &::after {
           border-top: none;
         }
       }
+      .za-cell__icon {
+        margin-right: 5px;
+      }
+      // .text-light {
+      //   font-size: 15px;
+      // }
     }
   }
   .operation {
@@ -52,8 +85,28 @@
       margin-bottom: 10px;
       label {
         margin-left: 10px;
-        font-size: 14px;
+        font-size: 13px;
+        color: #74acdf;
       }
     }
   }
+}
+.captchaSty {
+  border-radius: 16px;
+}
+.contentBox {
+  border-radius: 8px;
+  background: #fff;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: url("../../assets/images/write2.jpg") no-repeat center;
+  background-size: cover;
+  height: 350px;
+  transition: 0.6s all;
+}
+.iconSty {
+  // font-size: 15px;
+  font-weight: 500;
+  color: #75adde;
 }
