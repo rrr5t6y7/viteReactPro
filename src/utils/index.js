@@ -6,52 +6,52 @@ export const post = axios.post;
 
 export const typeMap = {
   1: {
-    icon: "canyin",
+    icon: "icon-canyin",
   },
   2: {
-    icon: "fushi",
+    icon: "icon-clothes",
   },
   3: {
-    icon: "jiaotong",
+    icon: "icon-traffic",
   },
   4: {
-    icon: "riyong",
+    icon: "icon-richanglianxi",
   },
   5: {
-    icon: "gouwu",
+    icon: "icon-gouwu",
   },
   6: {
-    icon: "xuexi",
+    icon: "icon-xuexi",
   },
   7: {
-    icon: "yiliao",
+    icon: "icon-yiliao",
   },
   8: {
-    icon: "lvxing",
+    icon: "icon-lvhang",
   },
   9: {
-    icon: "renqing",
+    icon: "icon-jiaojiyingchou",
   },
   10: {
-    icon: "qita",
+    icon: "icon-qita",
   },
   11: {
-    icon: "gongzi",
+    icon: "icon-gongzi",
   },
   12: {
-    icon: "jiangjin",
+    icon: "icon-bonus",
   },
   13: {
-    icon: "zhuanzhang",
+    icon: "icon-zhuanzhang",
   },
   14: {
-    icon: "licai",
+    icon: "icon-huabanfuben",
   },
   15: {
-    icon: "tuikuang",
+    icon: "icon-tuikuan",
   },
   16: {
-    icon: "qita",
+    icon: "icon-qita1",
   },
 };
 

@@ -55,33 +55,35 @@ const BillItem = ({ bill }) => {
         </div>
       </div>
       {bill &&
-        bill.bills.map((item) => (
-          <Cell
-            className={s.bill}
-            key={item.id}
-            onClick={() => goToDetail(item)}
-            title={
-              <>
-                <CustomIcon
-                  className={s.itemIcon}
-                  type={item.type_id ? typeMap[item.type_id].icon : 1}
-                />
-                <span>{item.type_name}</span>
-              </>
-            }
-            description={
-              <span
-                style={{ color: item.pay_type == 2 ? "red" : "#39be77" }}
-              >{`${item.pay_type == 1 ? "-" : "+"}${item.amount}`}</span>
-            }
-            help={
-              <div>
-                {dayjs(Number(item.date)).format("HH:mm")}{" "}
-                {item.remark ? `| ${item.remark}` : ""}
-              </div>
-            }
-          ></Cell>
-        ))}
+        bill.bills.map((item) => {
+          return (
+            <Cell
+              className={s.bill}
+              key={item.id}
+              onClick={() => goToDetail(item)}
+              title={
+                <>
+                  <CustomIcon
+                    className={s.itemIcon}
+                    type={typeMap[item.type_id].icon}
+                  />
+                  <span>{item.type_name}</span>
+                </>
+              }
+              description={
+                <span
+                  style={{ color: item.pay_type == 2 ? "red" : "#39be77" }}
+                >{`${item.pay_type == 1 ? "-" : "+"}${item.amount}`}</span>
+              }
+              help={
+                <div>
+                  {dayjs(Number(item.date)).format("HH:mm")}{" "}
+                  {item.remark ? `| ${item.remark}` : ""}
+                </div>
+              }
+            ></Cell>
+          );
+        })}
     </div>
   );
 };

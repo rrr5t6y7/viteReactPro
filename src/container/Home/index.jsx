@@ -1,5 +1,5 @@
 // testing
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Icon, Pull } from "zarm";
 import dayjs from "dayjs";
 import BillItem from "@/components/BillItem";
@@ -24,7 +24,7 @@ const Home = () => {
 
   useEffect(() => {
     getBillList(); // 初始化
-    console.log("typeRef", typeRef);
+    // console.log("typeRef", typeRef);
   }, [page, currentSelect, currentTime]);
 
   const getBillList = async () => {
@@ -74,17 +74,17 @@ const Home = () => {
   };
 
   // 筛选类型
-  const select = (item) => {
+  const select = useCallback((item) => {
     setRefreshing(REFRESH_STATE.loading);
     setPage(1);
     setCurrentSelect(item);
-  };
+  }, []);
   // 筛选月份
-  const selectMonth = (item) => {
+  const selectMonth = useCallback((item) => {
     setRefreshing(REFRESH_STATE.loading);
     setPage(1);
     setCurrentTime(item);
-  };
+  }, []);
 
   return (
     <div className={s.home}>
