@@ -38,8 +38,6 @@ const PopupType = forwardRef(({ onSelect }, ref) => {
     onSelect(item);
   };
 
-  console.log(expense);
-
   return (
     <Popup
       visible={show}

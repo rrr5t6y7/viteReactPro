@@ -5,13 +5,16 @@ import dayjs from "dayjs";
 import BillItem from "@/components/BillItem";
 import PopupType from "@/components/PopupType";
 import PopupDate from "@/components/PopupDate";
+import PopupAddBill from "@/components/PopupAddBill";
 import { get, REFRESH_STATE, LOAD_STATE } from "@/utils";
+import CustomIcon from "@/components/CustomIcon";
 
 import s from "./style.module.less";
 
 const Home = () => {
   const typeRef = useRef(); // 账单类型 ref
   const monthRef = useRef(); // 月份筛选 ref
+  const addRef = useRef(); // 添加 ref
   const [totalExpense, setTotalExpense] = useState(0); // 总支出
   const [totalIncome, setTotalIncome] = useState(0); // 总收入
   const [currentSelect, setCurrentSelect] = useState({}); // 当前筛选类型
@@ -86,6 +89,10 @@ const Home = () => {
     setCurrentTime(item);
   }, []);
 
+  const addToggle = () => {
+    addRef.current && addRef.current.show();
+  };
+
   return (
     <div className={s.home}>
       <div className={s.header}>
@@ -133,8 +140,13 @@ const Home = () => {
           </Pull>
         ) : null}
       </div>
+      <div className={s.add} onClick={addToggle}>
+        <CustomIcon type="icon-jilu" />
+      </div>
+
       <PopupType ref={typeRef} onSelect={select} />
       <PopupDate ref={monthRef} mode="month" onSelect={selectMonth} />
+      <PopupAddBill ref={addRef} onReload={refreshData} />
     </div>
   );
 };

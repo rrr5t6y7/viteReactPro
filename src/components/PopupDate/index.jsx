@@ -17,10 +17,6 @@ const PopupDate = forwardRef(({ onSelect, mode = "date" }, ref) => {
     }
   };
 
-  useEffect(() => {
-    console.log("123");
-  }, [onSelect]);
-
   if (ref) {
     ref.current = {
       show: () => {

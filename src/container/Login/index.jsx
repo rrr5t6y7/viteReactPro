@@ -2,6 +2,7 @@ import React, { useCallback, useRef, useState, useEffect } from "react";
 import { Cell, Input, Button, Checkbox, Toast } from "zarm";
 import CustomIcon from "@/components/CustomIcon";
 import Captcha from "react-captcha-code";
+import { useHistory, useLocation } from "react-router-dom";
 import s from "./style.module.less";
 import cx from "classnames";
 import { post } from "@/utils";
@@ -14,6 +15,7 @@ const Login = () => {
   const [captcha, setCaptcha] = useState(""); // 验证码变化后存储值
   const [type, setType] = useState("login"); // 登录注册类型
   const [headHei, setHeadHei] = useState(0); // 登录注册类型
+  const history = useHistory();
 
   //  验证码变化，回调方法
   const handleChange = useCallback((captcha) => {
@@ -32,6 +34,7 @@ const Login = () => {
       return;
     }
     try {
+      console.log(type);
       // 判断是否是登录状态
       if (type == "login") {
         // 执行登录接口，获取 token
@@ -41,6 +44,7 @@ const Login = () => {
         });
         // 将 token 写入 localStorage
         localStorage.setItem("token", data.token);
+        history.push("/");
       } else {
         if (!verify) {
           Toast.show("请输入验证码");
@@ -59,6 +63,7 @@ const Login = () => {
         setType("login");
       }
     } catch (error) {
+      console.log(error);
       Toast.show("系统错误");
     }
   };
