@@ -27,6 +27,7 @@ const Account = (props) => {
           new_pass2: value.newpass2,
         });
         Toast.show("修改成功");
+        window.location.href = "./user";
       }
     });
   };

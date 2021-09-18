@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import Header from "@/components/Header"; // 由于是内页，使用到公用头部
 import axios from "axios"; // // 由于采用 form-data 传递参数，所以直接只用 axios 进行请求
 import { get, post, imgUrlTrans } from "@/utils";
-import { baseUrl } from "config"; // 由于直接使用 axios 进行请求，统一封装了请求 baseUrl
+import { baseUrl } from "@/config"; // 由于直接使用 axios 进行请求，统一封装了请求 baseUrl
 import s from "./style.module.less";
 
 const UserInfo = () => {
@@ -20,7 +20,7 @@ const UserInfo = () => {
 
   // 获取用户信息
   const getUserInfo = async () => {
-    const { data } = await get("ß/user/get_userinfo");
+    const { data } = await get("/user/get_userinfo");
     setUser(data);
     setAvatar(imgUrlTrans(data.avatar));
     setSignature(data.signature);
@@ -37,6 +37,7 @@ const UserInfo = () => {
     // 生成 form-data 数据类型
     formData.append("file", file.file);
     // 通过 axios 设置  'Content-Type': 'multipart/form-data', 进行文件上传
+    console.log(baseUrl);
     axios({
       method: "post",
       url: `${baseUrl}/upload`,
@@ -60,8 +61,11 @@ const UserInfo = () => {
 
     Toast.show("修改成功");
     // 成功后回到个人中心页面
-    history.goBack();
+    window.location.href = "./user";
+    // history.goBack();
   };
+
+  console.log(avatar);
 
   return (
     <>

@@ -73,7 +73,7 @@ const User = () => {
             />
           }
         />
-        <Cell
+        {/* <Cell
           hasArrow
           title="我的标签"
           icon={
@@ -83,7 +83,7 @@ const User = () => {
               alt=""
             />
           }
-        />
+        /> */}
         <Cell
           hasArrow
           title="关于我们"

@@ -44,7 +44,9 @@ const Login = () => {
         });
         // 将 token 写入 localStorage
         localStorage.setItem("token", data.token);
-        history.push("/");
+        // history.push("/");
+        // 这里用 window.location.href 的原因是，utils/axios.js 内部需要再次被执行，才能通过 localStorage.getItem 拿到最新的 token。如果只是用 history.push 跳转页面的话，页面是不会被刷新，那么 axios.js 的 token 就无法设置。
+        window.location.href = "/";
       } else {
         if (!verify) {
           Toast.show("请输入验证码");

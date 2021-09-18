@@ -73,3 +73,15 @@ export const LOAD_STATE = {
   failure: 4, // 加载失败
   complete: 5, // 加载完成（无新数据）
 };
+
+const MODE = import.meta.env.MODE; // 环境变量
+import { baseUrl } from "@/config"; // 由于直接使用 axios 进行请求，统一封装了请求 baseUrl
+
+export const imgUrlTrans = (url) => {
+  if (url && url.startsWith("http")) {
+    return url;
+  } else {
+    url = `${MODE == "development" ? "" : "http://api.chennick.wang"}${url}`;
+    return url;
+  }
+};
