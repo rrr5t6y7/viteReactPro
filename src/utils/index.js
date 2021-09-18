@@ -53,6 +53,57 @@ export const typeMap = {
   16: {
     icon: "icon-qita1",
   },
+  17: {
+    icon: "icon-qita1",
+  },
+  18: {
+    icon: "icon-qita1",
+  },
+  19: {
+    icon: "icon-qita1",
+  },
+  20: {
+    icon: "icon-qita1",
+  },
+  21: {
+    icon: "icon-qita1",
+  },
+  22: {
+    icon: "icon-qita1",
+  },
+  23: {
+    icon: "icon-qita1",
+  },
+  24: {
+    icon: "icon-qita1",
+  },
+  25: {
+    icon: "icon-qita1",
+  },
+  26: {
+    icon: "icon-qita1",
+  },
+  27: {
+    icon: "icon-qita1",
+  },
+  28: {
+    icon: "icon-qita1",
+  },
+  29: {
+    icon: "icon-qita1",
+  },
+  30: {
+    icon: "icon-qita1",
+  },
+  31: {
+    icon: "icon-qita1",
+  },
+  32: {
+    icon: "icon-qita1",
+  },
+  33: {
+    icon: "icon-qita1",
+  },
 };
 
 // utils/index.js

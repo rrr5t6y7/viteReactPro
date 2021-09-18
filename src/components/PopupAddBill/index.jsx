@@ -206,7 +206,7 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
                 >
                   <CustomIcon
                     className={s.iconfont}
-                    type={typeMap[item.id].icon}
+                    type={typeMap[item.type_id].icon}
                   />
                 </span>
                 <span>{item.name}</span>

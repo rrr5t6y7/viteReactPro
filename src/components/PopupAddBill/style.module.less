@@ -82,6 +82,7 @@
     touch-action: pan-x;
   }
   .type-body {
+    overflow: auto;
     display: flex;
     white-space: nowrap;
     .type-item {
@@ -105,7 +106,7 @@
         }
       }
       .expense {
-         &.active {
+        &.active {
           background-color: #007fff;
           .iconfont {
             color: #fff;
@@ -113,7 +114,7 @@
         }
       }
       .income {
-         &.active {
+        &.active {
           background-color: rgb(236, 190, 37);
           .iconfont {
             color: #fff;
@@ -131,7 +132,13 @@
   :global {
     .za-input--textarea {
       border: 1px solid #e9e9e9;
-      padding:  10px;
+      padding: 10px;
     }
+  }
+}
+:global {
+  .za-popup {
+    overflow: auto;
+    background: #f6f6f6;
   }
 }
