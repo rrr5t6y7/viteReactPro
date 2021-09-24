@@ -8,37 +8,39 @@ import UserInfo from "@/container/UserInfo";
 import Account from "@/container/Account";
 import About from "@/container/About";
 
+const basePath = "/wpps";
+
 const routes = [
   {
-    path: "/",
+    path: `${basePath}/`,
     component: Home,
   },
   {
-    path: "/data",
+    path: `${basePath}/data`,
     component: Data,
   },
   {
-    path: "/user",
+    path: `${basePath}/user`,
     component: User,
   },
   {
-    path: "/detail",
+    path: `${basePath}/detail`,
     component: Detail,
   },
   {
-    path: "/login",
+    path: `${basePath}/login`,
     component: Login,
   },
   {
-    path: "/userInfo",
+    path: `${basePath}/userInfo`,
     component: UserInfo,
   },
   {
-    path: "/account",
+    path: `${basePath}/account`,
     component: Account,
   },
   {
-    path: "/about",
+    path: `${basePath}/about`,
     component: About,
   },
 ];
