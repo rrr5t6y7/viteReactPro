@@ -30,6 +30,7 @@ export default defineConfig({
       },
     },
   },
+  publicPath: "./wpps/viteReact/source/dist",
   server: {
     proxy: {
       "/api": {
