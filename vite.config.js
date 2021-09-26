@@ -30,7 +30,7 @@ export default defineConfig({
       },
     },
   },
-  base: "./wpps/viteReact/source/dist",
+  base: "./wpps/viteReact/source",
   server: {
     proxy: {
       "/api": {
