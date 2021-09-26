@@ -11,7 +11,7 @@ module.exports = {
       host: "175.24.112.44",
       ref: "origin/master",
       repo: "git@github.com:rrr5t6y7/viteReactPro.git",
-      path: "/home/nginx/www/wpps/viteReact/",
+      path: "/home/nginx/www/wpps/viteReact",
       "post-deploy":
         "git reset --hard && git checkout master && git pull && npm i --production=false && npm run build && pm2 startOrReload ecosystem.config.js", // -production=false 下载全量包
       env: {
