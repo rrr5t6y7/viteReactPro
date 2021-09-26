@@ -1,6 +1,6 @@
 import React, { useCallback, useRef, useState, useEffect } from "react";
 import { Cell, Input, Button, Checkbox, Toast } from "zarm";
-import CustomIcon from "@/components/CustomIcon";
+// import CustomIcon from "@/components/CustomIcon";
 import Captcha from "react-captcha-code";
 import { useHistory, useLocation } from "react-router-dom";
 import s from "./style.module.less";
@@ -113,9 +113,9 @@ const Login = () => {
         </div>
         <div className={s.form}>
           <Cell
-            icon={
-              <CustomIcon type="icon-user" className={s.iconSty} size="sm" />
-            }
+          // icon={
+          //   <CustomIcon type="icon-user" className={s.iconSty} size="sm" />
+          // }
           >
             <Input
               clearable
@@ -125,13 +125,13 @@ const Login = () => {
             />
           </Cell>
           <Cell
-            icon={
-              <CustomIcon
-                type="icon-password"
-                className={s.iconSty}
-                size="sm"
-              />
-            }
+          // icon={
+          //   <CustomIcon
+          //     type="icon-password"
+          //     className={s.iconSty}
+          //     size="sm"
+          //   />
+          // }
           >
             <Input
               clearable
@@ -142,13 +142,13 @@ const Login = () => {
           </Cell>
           {type == "register" ? (
             <Cell
-              icon={
-                <CustomIcon
-                  type="icon-yanzhengma-"
-                  className={s.iconSty}
-                  size="sm"
-                />
-              }
+            // icon={
+            //   <CustomIcon
+            //     type="icon-yanzhengma-"
+            //     className={s.iconSty}
+            //     size="sm"
+            //   />
+            // }
             >
               <Input
                 clearable

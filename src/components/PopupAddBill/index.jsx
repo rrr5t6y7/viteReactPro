@@ -2,11 +2,11 @@ import React, { forwardRef, useEffect, useRef, useState } from "react";
 import Proptypes from "prop-types";
 import cx from "classnames";
 import { Popup, Keyboard, Input, Toast } from "zarm";
-import { Icon } from "@zarm-design/icons";
+// import { Icon } from "@zarm-design/icons";
 import dayjs from "dayjs";
 
 import Popupdate from "../Popupdate";
-import CustomIcon from "../CustomIcon";
+// import CustomIcon from "../CustomIcon";
 import { get, typeMap, post } from "@/utils";
 
 import s from "./style.module.less";
@@ -150,7 +150,7 @@ const Popupaddbill = forwardRef(({ detail = {}, onReload }, ref) => {
         {/* 右上角关闭弹窗 */}
         <header className={s.header}>
           <span className={s.close} onClick={() => setShow(false)}>
-            <Icon type="wrong" />
+            {/* <Icon type="wrong" /> */}
           </span>
         </header>
         {/* 「收入」和「支出」类型切换 */}
@@ -180,7 +180,7 @@ const Popupaddbill = forwardRef(({ detail = {}, onReload }, ref) => {
             onClick={() => dateRef.current && dateRef.current.show()}
           >
             {dayjs(date).format("MM-DD")}{" "}
-            <Icon className={s.arrow} type="arrow-bottom" />
+            {/* <Icon className={s.arrow} type="arrow-bottom" /> */}
           </div>
         </div>
         <div className={s.money}>
@@ -205,10 +205,10 @@ const Popupaddbill = forwardRef(({ detail = {}, onReload }, ref) => {
                     [s.active]: currentType.id == item.id,
                   })}
                 >
-                  <CustomIcon
+                  {/* <CustomIcon
                     className={s.iconfont}
                     type={typeMap[item.type_id].icon}
-                  />
+                  /> */}
                 </span>
                 <span>{item.name}</span>
               </div>

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Progress } from "zarm";
-import { Icon } from "@zarm-design/icons";
+// import { Icon } from "@zarm-design/icons";
 import cx from "classnames";
 import dayjs from "dayjs";
 import { get, typeMap } from "@/utils";
-import CustomIcon from "@/components/CustomIcon";
+// import CustomIcon from "@/components/CustomIcon";
 import Popupdate from "@/components/Popupdate";
 import s from "./style.module.less";
 
@@ -110,7 +110,7 @@ const Data = () => {
       <div className={s.total}>
         <div className={s.time} onClick={monthShow}>
           <span>{currentMonth}</span>
-          <Icon className={s.date} type="date" />
+          {/* <Icon className={s.date} type="date" /> */}
         </div>
         <div className={s.title}>共支出</div>
         <div className={s.expense}>¥{totalExpense}</div>
@@ -148,9 +148,9 @@ const Data = () => {
               <div className={s.left}>
                 <div className={s.type}>
                   <span>
-                    <CustomIcon
+                    {/* <CustomIcon
                       type={item.type_id ? typeMap[item.type_id].icon : 1}
-                    />
+                    /> */}
                   </span>
                   <span className={s.name}>{item.type_name}</span>
                 </div>

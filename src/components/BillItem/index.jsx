@@ -3,7 +3,7 @@ import Proptypes from "prop-types";
 import dayjs from "dayjs";
 import { Cell } from "zarm";
 import { useHistory } from "react-router-dom";
-import CustomIcon from "../CustomIcon";
+// import CustomIcon from "../CustomIcon";
 import { typeMap } from "@/utils";
 
 import s from "./style.module.less";
@@ -63,10 +63,10 @@ const BillItem = ({ bill }) => {
               onClick={() => goToDetail(item)}
               title={
                 <>
-                  <CustomIcon
+                  {/* <CustomIcon
                     className={s.itemIcon}
                     type={typeMap[item.type_id].icon}
-                  />
+                  /> */}
                   <span>{item.type_name}</span>
                 </>
               }

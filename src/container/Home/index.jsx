@@ -1,14 +1,14 @@
 // testing
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Pull } from "zarm";
-import { Icon } from "@zarm-design/icons";
+// import { Icon } from "@zarm-design/icons";
 import dayjs from "dayjs";
 import BillItem from "@/components/BillItem";
 import PopupType from "@/components/PopupType";
 import Popupdate from "@/components/Popupdate";
 import Popupaddbill from "@/components/Popupaddbill";
 import { get, REFRESH_STATE, LOAD_STATE } from "@/utils";
-import CustomIcon from "@/components/CustomIcon";
+// import CustomIcon from "@/components/CustomIcon";
 
 import s from "./style.module.less";
 
@@ -109,13 +109,13 @@ const Home = () => {
           <div className={s.left} onClick={toggle}>
             <span className={s.title}>
               {currentSelect.name || "全部类型"}{" "}
-              <Icon className={s.arrow} type="arrow-bottom" />
+              {/* <Icon className={s.arrow} type="arrow-bottom" /> */}
             </span>
           </div>
           <div className={s.right}>
             <span className={s.time} onClick={monthToggle}>
               {currentTime}
-              <Icon className={s.arrow} type="arrow-bottom" />
+              {/* <Icon className={s.arrow} type="arrow-bottom" /> */}
             </span>
           </div>
         </div>
@@ -142,7 +142,7 @@ const Home = () => {
         ) : null}
       </div>
       <div className={s.add} onClick={addToggle}>
-        <CustomIcon type="icon-jilu" />
+        {/* <CustomIcon type="icon-jilu" /> */}
       </div>
 
       <PopupType ref={typeRef} onSelect={select} />

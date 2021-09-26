@@ -5,7 +5,7 @@ import qs from "query-string";
 import dayjs from "dayjs";
 import cx from "classnames";
 import Header from "@/components/Header";
-import CustomIcon from "@/components/CustomIcon";
+// import CustomIcon from "@/components/CustomIcon";
 import Popupaddbill from "@/components/Popupaddbill";
 import { get, typeMap, post } from "@/utils";
 import pic404 from "@/assets/images/noresult.svg";
@@ -65,10 +65,10 @@ const Detail = () => {
             })}
           >
             {/* typeMap 是我们事先约定好的 icon 列表 */}
-            <CustomIcon
+            {/* <CustomIcon
               className={s.iconfont}
               type={detail.type_id ? typeMap[detail.type_id].icon : 1}
-            />
+            /> */}
           </span>
           <span>{detail.type_name || ""}</span>
         </div>
@@ -89,11 +89,11 @@ const Detail = () => {
         </div>
         <div className={s.operation}>
           <span onClick={deleteDetail}>
-            <CustomIcon type="icon-shanchu" />
+            {/* <CustomIcon type="icon-shanchu" /> */}
             {/* 删除 */}
           </span>
           <span onClick={() => editRef.current && editRef.current.show()}>
-            <CustomIcon type="icon-bianji" />
+            {/* <CustomIcon type="icon-bianji" /> */}
             {/* 编辑 */}
           </span>
         </div>

@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import Proptypes from "prop-types";
 import { Popup } from "zarm";
-import { Icon } from "@zarm-design/icons";
+// import { Icon } from "@zarm-design/icons";
 import cx from "classnames";
 import { get } from "@/utils";
 
@@ -50,11 +50,11 @@ const PopupType = forwardRef(({ onSelect }, ref) => {
       <div className={s.popupType}>
         <div className={s.header}>
           请选择类型
-          <Icon
+          {/* <Icon
             type="wrong"
             className={s.cross}
             onClick={() => setShow(false)}
-          />
+          /> */}
         </div>
         <div className={s.content}>
           <div

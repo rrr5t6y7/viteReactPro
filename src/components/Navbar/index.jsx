@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Proptypes from "prop-types";
 import { TabBar } from "zarm";
 import { useHistory, useLocation } from "react-router-dom";
-import CustomIcon from "../CustomIcon";
+// import CustomIcon from "../CustomIcon";
 import s from "./style.module.less";
 
 const Navbar = ({ showNav, pathname }) => {
@@ -28,17 +28,17 @@ const Navbar = ({ showNav, pathname }) => {
       <TabBar.Item
         itemKey="/"
         title="账单"
-        icon={<CustomIcon type="icon-xingzhuang" />}
+        // icon={<CustomIcon type="icon-xingzhuang" />}
       />
       <TabBar.Item
         itemKey="/data"
         title="统计"
-        icon={<CustomIcon type="icon-tongji" />}
+        // icon={<CustomIcon type="icon-tongji" />}
       />
       <TabBar.Item
         itemKey="/user"
         title="我的"
-        icon={<CustomIcon type="icon-wodedangxuan" />}
+        // icon={<CustomIcon type="icon-wodedangxuan" />}
       />
     </TabBar>
   );
