@@ -8,7 +8,7 @@ import UserInfo from "@/container/UserInfo";
 import Account from "@/container/Account";
 import About from "@/container/About";
 
-const basePath = "/wpps";
+const basePath = "";
 
 const routes = [
   {

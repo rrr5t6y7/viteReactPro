@@ -1,7 +1,7 @@
 import React from "react";
 import Proptypes from "prop-types";
 import { useHistory } from "react-router-dom";
-import { Navbar, Icon } from "zarm";
+import { NavBar, Icon } from "zarm";
 
 import s from "./style.module.less";
 
@@ -10,7 +10,7 @@ const Header = ({ title = "" }) => {
   return (
     <div className={s.headerWarp}>
       <div className={s.block}>
-        <Navbar
+        <NavBar
           className={s.header}
           left={
             <Icon
