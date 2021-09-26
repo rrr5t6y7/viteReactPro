@@ -11,7 +11,7 @@ import About from "@/container/About";
 // const basePath = "/viteReact/source/dist/";
 const MODE = import.meta.env.MODE; // 环境变量
 
-const basePath = MODE === "development" ? "/" : "viteReact/source/dist/";
+const basePath = MODE === "development" ? "/" : "/viteReact/source/dist/";
 
 console.log(MODE);
 
