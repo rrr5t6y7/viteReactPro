@@ -20,8 +20,8 @@ axios.interceptors.response.use((res) => {
   if (res.data.code != 200) {
     if (res.data.msg) Toast.show(res.data.msg);
     if (res.data.code == 401) {
-      window.location.href =
-        MODE == "development" ? "/login" : "/wpps/viteReact/source/dist/login";
+      // window.location.href =
+      //   MODE == "development" ? "/login" : "/wpps/viteReact/source/dist/login";
     }
     return Promise.reject(res.data);
   }
