@@ -31,7 +31,7 @@ export default defineConfig({
     },
   },
   base: "./",
-  publicDir: "http://175.24.112.44/wpps/viteReact/source/dist/",
+  publicDir: "http://175.24.112.44/wpps/viteReact/source/",
   // outDir: "./wpps/viteReact/source/dist",
   server: {
     proxy: {
