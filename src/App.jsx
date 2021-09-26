@@ -11,7 +11,7 @@ import { ConfigProvider } from "zarm";
 import routes from "@/router";
 const MODE = import.meta.env.MODE; // 环境变量
 
-const baseUrl = MODE === "development" ? "/wpps/viteReact/source/dist/" : "/";
+const baseUrl = MODE === "development" ? "/" : "/wpps/viteReact/source/dist/";
 
 function App() {
   const location = useLocation(); // 拿到 location 实例
