@@ -26,6 +26,8 @@ function App() {
 
   console.log(routes);
 
+  console.log("222", showNav);
+
   return (
     <>
       <ConfigProvider primaryColor={"#fcbacc"}>
