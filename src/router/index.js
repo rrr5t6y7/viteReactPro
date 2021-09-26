@@ -8,39 +8,39 @@ import UserInfo from "@/container/UserInfo";
 import Account from "@/container/Account";
 import About from "@/container/About";
 
-const basePath = "http://175.24.112.44/wpps/viteReact/source/dist";
+const basePath = "/";
 
 const routes = [
   {
-    path: `${basePath}/`,
+    path: `${basePath}`,
     component: Home,
   },
   {
-    path: `${basePath}/data`,
+    path: `${basePath}data`,
     component: Data,
   },
   {
-    path: `${basePath}/user`,
+    path: `${basePath}user`,
     component: User,
   },
   {
-    path: `${basePath}/detail`,
+    path: `${basePath}detail`,
     component: Detail,
   },
   {
-    path: `${basePath}/login`,
+    path: `${basePath}login`,
     component: Login,
   },
   {
-    path: `${basePath}/userInfo`,
+    path: `${basePath}userInfo`,
     component: UserInfo,
   },
   {
-    path: `${basePath}/account`,
+    path: `${basePath}account`,
     component: Account,
   },
   {
-    path: `${basePath}/about`,
+    path: `${basePath}about`,
     component: About,
   },
 ];

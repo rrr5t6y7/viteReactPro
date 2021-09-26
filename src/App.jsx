@@ -7,10 +7,9 @@ import {
 } from "react-router-dom";
 
 import Navbar from "@/components/Navbar";
-
 import { ConfigProvider } from "zarm";
-
 import routes from "@/router";
+
 function App() {
   const location = useLocation(); // 拿到 location 实例
   const { pathname } = location; // 获取当前路径
@@ -21,6 +20,8 @@ function App() {
     console.log(pathname);
     setShowNav(needNav.includes(pathname));
   }, [pathname]); // [] 内的参数若是变化，便会执行上述回调函数=
+
+  console.log(routes);
 
   return (
     <>
