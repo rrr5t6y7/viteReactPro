@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import Proptypes from "prop-types";
 import dayjs from "dayjs";
 import { Cell } from "zarm";
 import { useHistory } from "react-router-dom";
@@ -89,7 +89,7 @@ const BillItem = ({ bill }) => {
 };
 
 BillItem.propTypes = {
-  bill: PropTypes.object,
+  bill: Proptypes.object,
 };
 
 export default BillItem;

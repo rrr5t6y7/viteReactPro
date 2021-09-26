@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import Proptypes from "prop-types";
 import { TabBar } from "zarm";
 import { useHistory, useLocation } from "react-router-dom";
 import CustomIcon from "../CustomIcon";
 import s from "./style.module.less";
 
-const NavBar = ({ showNav, pathname }) => {
+const Navbar = ({ showNav, pathname }) => {
   const [activeKey, setActiveKey] = useState("/");
   const history = useHistory();
 
@@ -44,8 +44,8 @@ const NavBar = ({ showNav, pathname }) => {
   );
 };
 
-NavBar.propTypes = {
-  showNav: PropTypes.bool,
+Navbar.propTypes = {
+  showNav: Proptypes.bool,
 };
 
-export default NavBar;
+export default Navbar;

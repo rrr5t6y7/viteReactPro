@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
-import NavBar from "@/components/NavBar";
+import Navbar from "@/components/Navbar";
 
 import { ConfigProvider } from "zarm";
 
@@ -33,7 +33,7 @@ function App() {
           ))}
         </Switch>
       </ConfigProvider>
-      <NavBar showNav={showNav} pathname={pathname} />
+      <Navbar showNav={showNav} pathname={pathname} />
     </>
   );
 }

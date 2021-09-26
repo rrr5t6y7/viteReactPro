@@ -4,7 +4,7 @@ import cx from "classnames";
 import dayjs from "dayjs";
 import { get, typeMap } from "@/utils";
 import CustomIcon from "@/components/CustomIcon";
-import PopupDate from "@/components/PopupDate";
+import Popupdate from "@/components/Popupdate";
 import s from "./style.module.less";
 
 let proportionChart = null;
@@ -180,7 +180,7 @@ const Data = () => {
           <div id="proportion"></div>
         </div>
       </div>
-      <PopupDate ref={monthRef} mode="month" onSelect={selectMonth} />
+      <Popupdate ref={monthRef} mode="month" onSelect={selectMonth} />
     </div>
   );
 };

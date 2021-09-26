@@ -4,8 +4,8 @@ import { Icon, Pull } from "zarm";
 import dayjs from "dayjs";
 import BillItem from "@/components/BillItem";
 import PopupType from "@/components/PopupType";
-import PopupDate from "@/components/PopupDate";
-import PopupAddBill from "@/components/PopupAddBill";
+import Popupdate from "@/components/Popupdate";
+import Popupaddbill from "@/components/Popupaddbill";
 import { get, REFRESH_STATE, LOAD_STATE } from "@/utils";
 import CustomIcon from "@/components/CustomIcon";
 
@@ -145,8 +145,8 @@ const Home = () => {
       </div>
 
       <PopupType ref={typeRef} onSelect={select} />
-      <PopupDate ref={monthRef} mode="month" onSelect={selectMonth} />
-      <PopupAddBill ref={addRef} onReload={refreshData} />
+      <Popupdate ref={monthRef} mode="month" onSelect={selectMonth} />
+      <Popupaddbill ref={addRef} onReload={refreshData} />
     </div>
   );
 };

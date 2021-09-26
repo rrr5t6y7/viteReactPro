@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 import cx from "classnames";
 import Header from "@/components/Header";
 import CustomIcon from "@/components/CustomIcon";
-import PopupAddBill from "@/components/PopupAddBill";
+import Popupaddbill from "@/components/Popupaddbill";
 import { get, typeMap, post } from "@/utils";
 import pic404 from "@/assets/images/noresult.svg";
 
@@ -97,7 +97,7 @@ const Detail = () => {
             {/* 编辑 */}
           </span>
         </div>
-        <PopupAddBill ref={editRef} detail={detail} onReload={getDetail} />
+        <Popupaddbill ref={editRef} detail={detail} onReload={getDetail} />
       </div>
     </div>
   );

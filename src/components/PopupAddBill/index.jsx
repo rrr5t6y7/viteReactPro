@@ -1,16 +1,16 @@
 import React, { forwardRef, useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
+import Proptypes from "prop-types";
 import cx from "classnames";
 import { Popup, Icon, Keyboard, Input, Toast } from "zarm";
 import dayjs from "dayjs";
 
-import PopupDate from "../PopupDate";
+import Popupdate from "../Popupdate";
 import CustomIcon from "../CustomIcon";
 import { get, typeMap, post } from "@/utils";
 
 import s from "./style.module.less";
 
-const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
+const Popupaddbill = forwardRef(({ detail = {}, onReload }, ref) => {
   const dateRef = useRef();
   const [show, setShow] = useState(false); // 内部控制弹窗显示隐藏。
   const [payType, setPayType] = useState("expense"); // 支出或收入类型
@@ -234,10 +234,10 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
           )}
         </div>
         <Keyboard type="price" onKeyClick={(value) => handleMoney(value)} />
-        <PopupDate ref={dateRef} onSelect={selectDate} />
+        <Popupdate ref={dateRef} onSelect={selectDate} />
       </div>
     </Popup>
   );
 });
 
-export default PopupAddBill;
+export default Popupaddbill;

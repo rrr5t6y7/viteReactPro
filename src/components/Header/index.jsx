@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+import Proptypes from "prop-types";
 import { useHistory } from "react-router-dom";
-import { NavBar, Icon } from "zarm";
+import { Navbar, Icon } from "zarm";
 
 import s from "./style.module.less";
 
@@ -10,7 +10,7 @@ const Header = ({ title = "" }) => {
   return (
     <div className={s.headerWarp}>
       <div className={s.block}>
-        <NavBar
+        <Navbar
           className={s.header}
           left={
             <Icon
@@ -27,7 +27,7 @@ const Header = ({ title = "" }) => {
 };
 
 Header.propTypes = {
-  title: PropTypes.string, // 标题
+  title: Proptypes.string, // 标题
 };
 
 export default Header;

@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import Proptypes from "prop-types";
 import { Popup, Icon } from "zarm";
 import cx from "classnames";
 import { get } from "@/utils";
@@ -93,7 +93,7 @@ const PopupType = forwardRef(({ onSelect }, ref) => {
 });
 
 PopupType.propTypes = {
-  onSelect: PropTypes.func,
+  onSelect: Proptypes.func,
 };
 
 export default PopupType;
