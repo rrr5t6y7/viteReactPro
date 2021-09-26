@@ -8,7 +8,12 @@ import UserInfo from "@/container/UserInfo";
 import Account from "@/container/Account";
 import About from "@/container/About";
 
-const basePath = "/wpps/viteReact/source/dist/";
+// const basePath = "/wpps/viteReact/source/dist/";
+const MODE = import.meta.env.MODE; // 环境变量
+
+const basePath = MODE === "development" ? "/" : "/wpps/viteReact/source/dist/";
+
+console.log(MODE);
 
 const routes = [
   {
