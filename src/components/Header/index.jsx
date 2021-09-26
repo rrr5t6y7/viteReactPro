@@ -1,7 +1,8 @@
 import React from "react";
 import Proptypes from "prop-types";
 import { useHistory } from "react-router-dom";
-import { NavBar, Icon } from "zarm";
+import { NavBar } from "zarm";
+import { Icon } from "@zarm-design/icons";
 
 import s from "./style.module.less";
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Icon, Progress } from "zarm";
+import { Progress } from "zarm";
+import { Icon } from "@zarm-design/icons";
 import cx from "classnames";
 import dayjs from "dayjs";
 import { get, typeMap } from "@/utils";

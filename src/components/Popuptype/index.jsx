@@ -1,6 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import Proptypes from "prop-types";
-import { Popup, Icon } from "zarm";
+import { Popup } from "zarm";
+import { Icon } from "@zarm-design/icons";
 import cx from "classnames";
 import { get } from "@/utils";
 

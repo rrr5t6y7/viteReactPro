@@ -1,6 +1,7 @@
 // testing
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Icon, Pull } from "zarm";
+import { Pull } from "zarm";
+import { Icon } from "@zarm-design/icons";
 import dayjs from "dayjs";
 import BillItem from "@/components/BillItem";
 import PopupType from "@/components/PopupType";

@@ -1,7 +1,8 @@
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 import Proptypes from "prop-types";
 import cx from "classnames";
-import { Popup, Icon, Keyboard, Input, Toast } from "zarm";
+import { Popup, Keyboard, Input, Toast } from "zarm";
+import { Icon } from "@zarm-design/icons";
 import dayjs from "dayjs";
 
 import Popupdate from "../Popupdate";
