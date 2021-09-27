@@ -30,7 +30,7 @@ export default defineConfig({
       },
     },
   },
-  base: "",
+  base: "/viteReact/source/dist/",
   publicDir: "http://175.24.112.44/viteReact/source/dist/",
   // outDir: "./wpps/viteReact/source/dist",
   server: {
